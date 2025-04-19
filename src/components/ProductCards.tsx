@@ -8,7 +8,10 @@ interface ProductCardProps{
 }
 
 export default function ProductCards({product}: ProductCardProps) {
-    const isNew = new Date(product.createdAt).getTime() > - 1000 * 60 * 60 * 7;
+   
+    const isNew =
+  Date.now() - new Date(product.createdAt).getTime() < 1000 * 60 * 60 * 7;
+
 
 return (
     

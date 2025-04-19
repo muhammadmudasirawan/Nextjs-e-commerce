@@ -4,7 +4,7 @@ import { CartItemWithProducts } from "@/lib/db/cart";
 import { formatPrice } from "@/lib/format";
 import Image from "next/image";
 import Link from "next/link";
-import { useTransition } from "react";
+import { JSX, useTransition } from "react";
 
 interface CartEntryProps {
   cartItem: CartItemWithProducts;

@@ -58,7 +58,7 @@ export async function getCart(): Promise<ShoppingCart | null> {
         ...cart,
         size: cart.Item.reduce((acc, item) => acc + item.quantity, 0),
         subtotal: cart.Item.reduce(
-            (acc, item) => acc + item.quantity * item.product.price,
+            (acc, item) => acc + item.quantity * item.product.price, //It adds up the total cost of all items in the cart.
             0
         ),
     };

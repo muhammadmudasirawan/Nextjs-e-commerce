@@ -28,7 +28,7 @@ export default async function Home({
   });
 
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center ">
       {currentPage === 1 && (
         <div className="hero rounded-xl bg-base-200">
           <div className="hero-content flex-col lg:flex-row">
@@ -36,7 +36,7 @@ export default async function Home({
               src={products[0].imageUrl}
               alt={products[0].name}
               width={400}
-              height={800}
+              height={900}
               className="w-full max-w-sm rounded-lg shadow-2xl"
               priority
             />

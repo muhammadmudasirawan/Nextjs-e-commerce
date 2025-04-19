@@ -1,22 +1,33 @@
-import type { NextConfig } from "next";
-import { hostname } from "os";
+// next.config.js
 
-const nextConfig: NextConfig = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   images: {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "plus.unsplash.com", // ✅ Yeh sahi hai
+        hostname: "plus.unsplash.com",
       },
       {
         protocol: "https",
-        hostname: "images.unsplash.com", // Bonus Tip
+        hostname: "images.unsplash.com",
       },
-     { hostname: "lh3.googleusercontent.com"}
+      {
+        protocol: "https",
+        hostname: "lh3.googleusercontent.com",
+      },
+      {
+        protocol: "https",
+        hostname: "www.tradeindia.com", 
+      },
+      {
+        protocol: "https",
+        hostname: "www.junaidjamshed.com", // ✅ Junaid Jamshed
+      },
     ],
   },
   experimental: {
-    serverActions: true, // Yeh sahi hai Next.js 13.4+
+    serverActions: true,
   },
 };
 
